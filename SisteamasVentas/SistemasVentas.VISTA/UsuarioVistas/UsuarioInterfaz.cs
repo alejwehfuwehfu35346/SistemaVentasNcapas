@@ -105,5 +105,65 @@ namespace SistemasVentas.VISTA.UsuarioVistas
                 dataGridView1.DataSource = bss.ListarUsuarioBss();
             }
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            PersonaSeleccionar fr = new PersonaSeleccionar();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Persona p = bssuser.ObtenerPersonaIdBss(IdPersonaSeleccionada);
+                textBox1.Text = p.Nombre + " " + p.Apellido;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Usuario u = new Usuario();
+                u.IdPersona = IdPersonaSeleccionada;
+                u.NombreUser = textBox2.Text;
+                u.Contraseña = textBox3.Text;
+                u.FechaReg = dateTimePicker1.Value;
+
+                bss.InsertarUsuarioBss(u);
+                MessageBox.Show("Se guardó correctamente el usuario");
+
+                dataGridView1.DataSource = bss.ListarUsuarioBss();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Usuario editarUsuario = bss.ObtenerUsuarioIdBss(IdUsuarioSeleccionada);
+                editarUsuario.IdPersona = IdPersonaSeleccionada;
+                editarUsuario.NombreUser = textBox2.Text;
+                editarUsuario.Contraseña = textBox3.Text;
+                editarUsuario.FechaReg = dateTimePicker1.Value;
+                bss.EditarUsuarioBss(editarUsuario);
+                MessageBox.Show("Datos Actualizados");
+
+
+                dataGridView1.DataSource = bss.ListarUsuarioBss();
+            }
+        }
     }
 }

@@ -36,7 +36,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(124, 31);
+            textBox1.Location = new Point(109, 31);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(208, 23);
             textBox1.TabIndex = 7;
@@ -53,7 +53,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(257, 138);
+            button2.Location = new Point(154, 115);
             button2.Name = "button2";
             button2.Size = new Size(75, 29);
             button2.TabIndex = 5;
@@ -63,7 +63,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(37, 141);
+            button1.Location = new Point(154, 75);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;

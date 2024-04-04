@@ -40,7 +40,7 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(93, 318);
+            button2.Location = new Point(669, 51);
             button2.Name = "button2";
             button2.Size = new Size(59, 41);
             button2.TabIndex = 14;
@@ -52,7 +52,7 @@
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(158, 318);
+            button1.Location = new Point(35, 51);
             button1.Name = "button1";
             button1.Size = new Size(59, 41);
             button1.TabIndex = 13;
@@ -65,12 +65,12 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(5, 12);
+            dataGridView1.Location = new Point(100, 51);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(702, 290);
+            dataGridView1.Size = new Size(546, 290);
             dataGridView1.TabIndex = 12;
             // 
             // ClienteSeleccionar
@@ -78,7 +78,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1000, 596);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(750, 366);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);

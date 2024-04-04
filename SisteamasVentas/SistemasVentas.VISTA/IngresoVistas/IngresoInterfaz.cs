@@ -108,5 +108,69 @@ namespace SistemasVentas.VISTA.IngresoVistas
                 dataGridView1.DataSource = bss.ListarIngresoBss();
             }
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            ProveedorSeleccionar fr = new ProveedorSeleccionar();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Proveedor u = bssuser.ObtenerProveedorIdBss(IdProveedorSeleccionada);
+                textBox1.Text = u.Nombre;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!decimal.TryParse(textBox2.Text, out decimal total))
+            {
+                MessageBox.Show("El campo Total solo puede contener números.");
+            }
+            else
+            {
+                Ingreso u = new Ingreso();
+                u.IdProveedor = IdProveedorSeleccionada;
+                u.Total = Convert.ToDecimal(textBox2.Text);
+                u.FechaIngreso = dateTimePicker1.Value;
+
+                bss.InsertarIngresoBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarIngresoBss();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!decimal.TryParse(textBox2.Text, out decimal total))
+            {
+                MessageBox.Show("El campo Total solo puede contener números.");
+            }
+            else
+            {
+                int IdIngresoSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Ingreso editarIngreso = bss.ObtenerIngresoIdBss(IdIngresoSeleccionada);
+                editarIngreso.IdProveedor = IdProveedorSeleccionada;
+                editarIngreso.Total = Convert.ToDecimal(textBox2.Text);
+                editarIngreso.FechaIngreso = dateTimePicker1.Value;
+                bss.EditarIngresoBss(editarIngreso);
+                MessageBox.Show("Datos Actualizados");
+
+
+                dataGridView1.DataSource = bss.ListarIngresoBss();
+            }
+        }
     }
 }

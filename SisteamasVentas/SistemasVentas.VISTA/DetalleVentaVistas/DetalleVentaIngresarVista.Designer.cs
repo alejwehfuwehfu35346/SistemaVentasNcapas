@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleVentaIngresarVista));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -91,7 +92,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(51, 286);
+            button1.Location = new Point(278, 257);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 5;
@@ -155,7 +156,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(460, 65);
+            button4.Location = new Point(42, 286);
             button4.Name = "button4";
             button4.Size = new Size(94, 23);
             button4.TabIndex = 13;
@@ -167,6 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(566, 359);
             Controls.Add(button4);
             Controls.Add(button3);

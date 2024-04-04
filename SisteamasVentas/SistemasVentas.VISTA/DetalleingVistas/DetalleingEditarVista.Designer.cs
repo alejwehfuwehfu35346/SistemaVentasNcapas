@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleingEditarVista));
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -69,7 +70,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(338, 389);
+            button2.Location = new Point(249, 370);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 31;
@@ -78,7 +79,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(25, 389);
+            button1.Location = new Point(249, 341);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 30;
@@ -88,7 +89,7 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(26, 333);
+            dateTimePicker1.Location = new Point(177, 312);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 29;
@@ -193,6 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(574, 428);
             Controls.Add(button4);
             Controls.Add(button3);

@@ -33,14 +33,14 @@
             textBox2 = new TextBox();
             label8 = new Label();
             textBox1 = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             textBox3 = new TextBox();
             panel1 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -82,50 +82,6 @@
             textBox1.Size = new Size(210, 23);
             textBox1.TabIndex = 107;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Red;
-            label6.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(565, 44);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 23);
-            label6.TabIndex = 106;
-            label6.Text = "ELIMINAR";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Red;
-            label5.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(863, 44);
-            label5.Name = "label5";
-            label5.Size = new Size(114, 23);
-            label5.TabIndex = 105;
-            label5.Text = "ACTUALIZAR";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Red;
-            label4.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(390, 44);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 23);
-            label4.TabIndex = 104;
-            label4.Text = "LIMPIAR";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Red;
-            label3.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(711, 44);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 23);
-            label3.TabIndex = 103;
-            label3.Text = "INSERTAR";
-            // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
@@ -162,15 +118,58 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
             panel1.Location = new Point(8, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(1071, 100);
             panel1.TabIndex = 114;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Red;
+            button4.Location = new Point(889, 27);
+            button4.Name = "button4";
+            button4.Size = new Size(104, 53);
+            button4.TabIndex = 4;
+            button4.Text = "ELIMINAR";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Red;
+            button3.Location = new Point(739, 27);
+            button3.Name = "button3";
+            button3.Size = new Size(100, 53);
+            button3.TabIndex = 3;
+            button3.Text = "INSERTAR";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Red;
+            button2.Location = new Point(587, 24);
+            button2.Name = "button2";
+            button2.Size = new Size(96, 56);
+            button2.TabIndex = 2;
+            button2.Text = "LIMPIAR";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Red;
+            button1.Location = new Point(447, 24);
+            button1.Name = "button1";
+            button1.Size = new Size(103, 56);
+            button1.TabIndex = 1;
+            button1.Text = "ACTUALIZAR";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // label2
             // 
@@ -214,14 +213,14 @@
         private TextBox textBox2;
         private Label label8;
         private TextBox textBox1;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
         private DataGridView dataGridView1;
         private Label label1;
         private TextBox textBox3;
         private Panel panel1;
         private Label label2;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
     }
 }

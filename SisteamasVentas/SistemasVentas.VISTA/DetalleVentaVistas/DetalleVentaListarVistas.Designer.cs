@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleVentaListarVistas));
             dataGridView1 = new DataGridView();
             button1 = new Button();
             button2 = new Button();
@@ -39,6 +40,7 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 21);
             dataGridView1.Name = "dataGridView1";
@@ -50,7 +52,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(12, 415);
+            button1.Location = new Point(132, 415);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
@@ -61,7 +63,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(107, 415);
+            button2.Location = new Point(232, 415);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // button3
             // 
             button3.DialogResult = DialogResult.OK;
-            button3.Location = new Point(207, 415);
+            button3.Location = new Point(325, 415);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 3;
@@ -84,6 +86,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(527, 450);
             Controls.Add(button3);
             Controls.Add(button2);

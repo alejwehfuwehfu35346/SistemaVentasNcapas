@@ -82,5 +82,46 @@ namespace SistemasVentas.VISTA.RolVistas
                 dataGridView1.DataSource = bss.ListarRolBss();
             }
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío. Por favor, ingrese un nombre para el rol.");
+            }
+            else
+            {
+                Rol m = new Rol();
+                m.Nombre = textBox1.Text;
+
+                bss.InsertarRolBss(m);
+                MessageBox.Show("Se guardó correctamente");
+
+                dataGridView1.DataSource = bss.ListarRolBss();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío.");
+            }
+            else
+            {
+                int IdRolSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Rol editarRol = bss.ObtenerRolIdBss(IdRolSeleccionada);
+                editarRol.Nombre = textBox1.Text;
+                bss.EditarRolBss(editarRol);
+                MessageBox.Show("Datos Actualizados");
+
+                dataGridView1.DataSource = bss.ListarRolBss();
+            }
+        }
     }
 }

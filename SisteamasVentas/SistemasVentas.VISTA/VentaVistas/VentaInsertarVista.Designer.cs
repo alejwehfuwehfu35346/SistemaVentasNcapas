@@ -70,7 +70,7 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(31, 125);
+            dateTimePicker1.Location = new Point(141, 127);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(314, 23);
             dateTimePicker1.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(31, 179);
+            button1.Location = new Point(249, 174);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 7;
@@ -108,7 +108,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(276, 179);
+            button2.Location = new Point(249, 203);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(375, 47);
+            button4.Location = new Point(31, 174);
             button4.Name = "button4";
             button4.Size = new Size(112, 23);
             button4.TabIndex = 10;

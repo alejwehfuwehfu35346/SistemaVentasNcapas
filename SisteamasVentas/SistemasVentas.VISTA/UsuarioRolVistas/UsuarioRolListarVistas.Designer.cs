@@ -39,6 +39,7 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(33, 1);
             dataGridView1.Name = "dataGridView1";
@@ -50,7 +51,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(33, 456);
+            button1.Location = new Point(142, 467);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
@@ -61,7 +62,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(134, 456);
+            button2.Location = new Point(248, 467);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 5;
@@ -72,7 +73,7 @@
             // button3
             // 
             button3.DialogResult = DialogResult.OK;
-            button3.Location = new Point(238, 456);
+            button3.Location = new Point(350, 467);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 6;

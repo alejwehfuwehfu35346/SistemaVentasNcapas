@@ -40,9 +40,9 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(309, 318);
+            button2.Location = new Point(-2, 12);
             button2.Name = "button2";
-            button2.Size = new Size(59, 41);
+            button2.Size = new Size(37, 20);
             button2.TabIndex = 8;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -52,9 +52,9 @@
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(429, 318);
+            button1.Location = new Point(41, 12);
             button1.Name = "button1";
-            button1.Size = new Size(59, 41);
+            button1.Size = new Size(34, 20);
             button1.TabIndex = 7;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -63,9 +63,9 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridView1.BackgroundColor = Color.Red;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(5, 12);
+            dataGridView1.Location = new Point(-2, 38);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
@@ -77,7 +77,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightBlue;
+            BackColor = Color.Black;
             ClientSize = new Size(500, 370);
             Controls.Add(button2);
             Controls.Add(button1);

@@ -79,5 +79,45 @@ namespace SistemasVentas.VISTA.TipoProdVistas
                 dataGridView1.DataSource = bss.ListarTipoProdBss();
             }
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío.");
+            }
+            else
+            {
+                TipoProd m = new TipoProd();
+                m.Nombre = textBox1.Text;
+
+                bss.InsertarTipoProdBss(m);
+                MessageBox.Show("Se guardó correctamente");
+                dataGridView1.DataSource = bss.ListarTipoProdBss();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("El campo Nombre está vacío.");
+            }
+            else
+            {
+                int IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                TipoProd editarTipoProd = bss.ObtenerTipoProdIdBss(IdTipoProdSeleccionada);
+                editarTipoProd.Nombre = textBox1.Text;
+                bss.EditarTipoProdBss(editarTipoProd);
+                MessageBox.Show("Datos Actualizados");
+
+                dataGridView1.DataSource = bss.ListarTipoProdBss();
+            }
+        }
     }
 }

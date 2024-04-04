@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleingInsertarVista));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -145,14 +146,14 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(31, 338);
+            dateTimePicker1.Location = new Point(182, 317);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 12;
             // 
             // button1
             // 
-            button1.Location = new Point(30, 394);
+            button1.Location = new Point(237, 377);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 13;
@@ -162,7 +163,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(343, 394);
+            button2.Location = new Point(237, 421);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 14;
@@ -181,7 +182,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(451, 66);
+            button4.Location = new Point(31, 339);
             button4.Name = "button4";
             button4.Size = new Size(104, 23);
             button4.TabIndex = 16;
@@ -193,6 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(583, 477);
             Controls.Add(button4);
             Controls.Add(button3);

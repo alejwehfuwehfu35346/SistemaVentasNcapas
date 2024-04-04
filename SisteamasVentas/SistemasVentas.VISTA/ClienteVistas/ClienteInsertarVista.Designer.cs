@@ -89,7 +89,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(393, 16);
+            button1.Location = new Point(382, 56);
             button1.Name = "button1";
             button1.Size = new Size(106, 23);
             button1.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(15, 164);
+            button2.Location = new Point(153, 154);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 7;
@@ -109,7 +109,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(393, 177);
+            button3.Location = new Point(262, 154);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(519, 248);
+            ClientSize = new Size(519, 187);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);

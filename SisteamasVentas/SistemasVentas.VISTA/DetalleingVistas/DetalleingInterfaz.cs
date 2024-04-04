@@ -162,5 +162,114 @@ namespace SistemasVentas.VISTA.DetalleingVistas
                 textBox2.Text = p.Descripcion;
             }
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            IngresoSeleccionar fr = new IngresoSeleccionar();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Ingreso i = bssuser.ObtenerIngresoIdBss(IdIngresoSeleccionado);
+                textBox1.Text = i.Estado;
+            }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            ProductoSeleccionar fr = new ProductoSeleccionar();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Producto p = bssuser2.ObtenerProductoIdBss(IdProductoSeleccionado);
+                textBox2.Text = p.Descripcion;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!int.TryParse(textBox3.Text, out int cantidad))
+            {
+                MessageBox.Show("La cantidad debe ser un número entero válido.");
+            }
+            else if (!decimal.TryParse(textBox4.Text, out decimal precioCosto))
+            {
+                MessageBox.Show("El precio de costo debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox5.Text, out decimal precioVenta))
+            {
+                MessageBox.Show("El precio de venta debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox6.Text, out decimal subTotal))
+            {
+                MessageBox.Show("El subtotal debe ser un valor numérico válido.");
+            }
+            else
+            {
+                Detalleing d = new Detalleing();
+                d.IdIngreso = IdIngresoSeleccionado;
+                d.IdProducto = IdProductoSeleccionado;
+                d.FechaVenc = dateTimePicker1.Value;
+                d.Cantidad = Convert.ToInt32(textBox3.Text);
+                d.PrecioCosto = Convert.ToDecimal(textBox4.Text);
+                d.PrecioVenta = Convert.ToDecimal(textBox5.Text);
+                d.SubTotal = Convert.ToDecimal(textBox6.Text);
+
+                bss.InsertarDetalleingBss(d);
+                MessageBox.Show("Se guardo correctamente");
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!int.TryParse(textBox3.Text, out int cantidad))
+            {
+                MessageBox.Show("La cantidad debe ser un número entero válido.");
+            }
+            else if (!decimal.TryParse(textBox4.Text, out decimal precioCosto))
+            {
+                MessageBox.Show("El precio de costo debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox5.Text, out decimal precioVenta))
+            {
+                MessageBox.Show("El precio de venta debe ser un valor numérico válido.");
+            }
+            else if (!decimal.TryParse(textBox6.Text, out decimal subTotal))
+            {
+                MessageBox.Show("El subtotal debe ser un valor numérico válido.");
+            }
+            else
+            {
+                int IdDetalleingSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Detalleing editarDetalleing = bss.ObtenerDetalleIngIdBss(IdDetalleingSeleccionada);
+                editarDetalleing.IdIngreso = IdIngresoSeleccionado;
+                editarDetalleing.IdProducto = IdProductoSeleccionado;
+                editarDetalleing.FechaVenc = dateTimePicker1.Value;
+                editarDetalleing.Cantidad = Convert.ToInt32(textBox3.Text);
+                editarDetalleing.PrecioCosto = Convert.ToDecimal(textBox4.Text);
+                editarDetalleing.PrecioVenta = Convert.ToDecimal(textBox5.Text);
+                editarDetalleing.SubTotal = Convert.ToDecimal(textBox6.Text);
+                bss.EditarDetalleIngBss(editarDetalleing);
+                MessageBox.Show("Datos Actualizados");
+
+
+                dataGridView1.DataSource = bss.ListarDetalleingBss();
+            }
+        }
     }
 }

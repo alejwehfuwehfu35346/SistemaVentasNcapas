@@ -45,7 +45,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(307, 235);
+            button2.Location = new Point(213, 264);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 35;
@@ -55,7 +55,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(21, 235);
+            button1.Location = new Point(213, 235);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 34;

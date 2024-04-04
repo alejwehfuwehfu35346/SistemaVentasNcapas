@@ -48,16 +48,16 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 450);
+            pictureBox1.Size = new Size(756, 450);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackColor = Color.Gray;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(299, 36);
+            pictureBox2.Location = new Point(258, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(205, 168);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -72,7 +72,7 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
-            panel1.Location = new Point(128, 226);
+            panel1.Location = new Point(72, 210);
             panel1.Name = "panel1";
             panel1.Size = new Size(567, 169);
             panel1.TabIndex = 7;
@@ -131,7 +131,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RoyalBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(756, 450);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);

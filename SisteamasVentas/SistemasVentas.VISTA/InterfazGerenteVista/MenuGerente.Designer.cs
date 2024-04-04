@@ -42,7 +42,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(32, 53);
+            pictureBox2.Location = new Point(0, 39);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(131, 97);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -52,8 +52,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Gray;
             label2.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(224, 89);
+            label2.Location = new Point(315, 61);
             label2.Name = "label2";
             label2.Size = new Size(163, 50);
             label2.TabIndex = 5;
@@ -62,8 +63,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Gray;
             label1.Font = new Font("Sitka Text", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(156, 39);
+            label1.Location = new Point(137, 61);
             label1.Name = "label1";
             label1.Size = new Size(182, 50);
             label1.TabIndex = 4;
@@ -71,23 +73,27 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.PaleTurquoise;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 169);
+            pictureBox1.Location = new Point(0, 183);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(735, 313);
+            pictureBox1.Size = new Size(503, 313);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.LightSkyBlue;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(759, 186);
+            panel1.Size = new Size(503, 186);
             panel1.TabIndex = 8;
             // 
             // MenuGerente
@@ -95,7 +101,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
-            ClientSize = new Size(759, 519);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(509, 511);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;

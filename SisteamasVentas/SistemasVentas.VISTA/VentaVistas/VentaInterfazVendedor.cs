@@ -87,5 +87,56 @@ namespace SistemasVentas.VISTA.VentaVistas
             textBox2.Clear();
             textBox3.Clear();
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            ClienteSeleccionar fr = new ClienteSeleccionar();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Cliente c = bsscli.ObtenerClienteIdBss(IdClienteSeleccionada);
+                textBox1.Text = c.TipoCliente;
+            }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            UsuarioSeleccionar fr = new UsuarioSeleccionar();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Usuario u = bssuser.ObtenerUsuarioIdBss(IdUsuarioSeleccionada);
+                textBox2.Text = u.NombreUser;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else if (!decimal.TryParse(textBox3.Text, out decimal totalVenta))
+            {
+                MessageBox.Show("El total de la venta solo puede contener números.");
+            }
+            else
+            {
+                Venta u = new Venta();
+                u.IdCliente = IdClienteSeleccionada;
+                u.IdVendedor = IdUsuarioSeleccionada;
+                u.Total = Convert.ToDecimal(textBox3.Text);
+                u.Fecha = dateTimePicker1.Value;
+
+                bss.InsertarVentaBss(u);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarVentaBss();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
     }
 }

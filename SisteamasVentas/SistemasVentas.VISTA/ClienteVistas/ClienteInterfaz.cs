@@ -102,5 +102,52 @@ namespace SistemasVentas.VISTA.ClienteVistas
                 dataGridView1.DataSource = bss.ListarClienteBss();
             }
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                Cliente c = new Cliente();
+                c.IdPersona = IdPersonaSeleccionada;
+                c.TipoCliente = textBox2.Text;
+                c.CodigoCliente = textBox3.Text;
+
+                bss.InsertarClienteBss(c);
+                MessageBox.Show("Se guardo correctamente ");
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
+            else
+            {
+                int IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                Cliente editarCliente = bss.ObtenerClienteIdBss(IdClienteSeleccionada);
+                editarCliente.IdPersona = IdPersonaSeleccionada;
+                editarCliente.TipoCliente = textBox2.Text;
+                editarCliente.CodigoCliente = textBox3.Text;
+                bss.EditarClienteBss(editarCliente);
+                MessageBox.Show("Datos Actualizados");
+
+
+                dataGridView1.DataSource = bss.ListarClienteBss();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
     }
 }

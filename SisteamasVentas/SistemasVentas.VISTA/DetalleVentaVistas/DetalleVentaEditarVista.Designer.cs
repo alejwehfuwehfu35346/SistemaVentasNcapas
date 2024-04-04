@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleVentaEditarVista));
             button4 = new Button();
             button3 = new Button();
             textBox5 = new TextBox();
@@ -46,7 +47,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(445, 69);
+            button4.Location = new Point(72, 301);
             button4.Name = "button4";
             button4.Size = new Size(94, 23);
             button4.TabIndex = 27;
@@ -56,7 +57,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(445, 24);
+            button3.Location = new Point(257, -2);
             button3.Name = "button3";
             button3.Size = new Size(94, 23);
             button3.TabIndex = 26;
@@ -94,14 +95,14 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(166, 24);
+            textBox1.Location = new Point(166, 27);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(247, 23);
             textBox1.TabIndex = 21;
             // 
             // button2
             // 
-            button2.Location = new Point(263, 290);
+            button2.Location = new Point(245, 290);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 20;
@@ -110,7 +111,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(36, 290);
+            button1.Location = new Point(245, 261);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 19;
@@ -167,7 +168,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(559, 359);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(523, 348);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(textBox5);

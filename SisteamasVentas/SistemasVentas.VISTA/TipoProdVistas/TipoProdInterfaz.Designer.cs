@@ -29,82 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoProdInterfaz));
-            button3 = new Button();
-            button4 = new Button();
-            button2 = new Button();
-            button1 = new Button();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // button3
-            // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(35, 361);
-            button3.Name = "button3";
-            button3.Size = new Size(59, 49);
-            button3.TabIndex = 21;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.DialogResult = DialogResult.OK;
-            button4.Location = new Point(203, 458);
-            button4.Name = "button4";
-            button4.Size = new Size(59, 49);
-            button4.TabIndex = 20;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.DialogResult = DialogResult.OK;
-            button2.Location = new Point(203, 361);
-            button2.Name = "button2";
-            button2.Size = new Size(59, 49);
-            button2.TabIndex = 19;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(32, 458);
-            button1.Name = "button1";
-            button1.Size = new Size(59, 49);
-            button1.TabIndex = 18;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // textBox1
             // 
-            textBox1.Location = new Point(100, 176);
+            textBox1.Location = new Point(455, 44);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(214, 23);
+            textBox1.Size = new Size(274, 23);
             textBox1.TabIndex = 17;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(320, 106);
             dataGridView1.Name = "dataGridView1";
@@ -117,8 +66,11 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightSkyBlue;
+            panel1.BackColor = Color.Gray;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textBox1);
             panel1.Location = new Point(-1, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(760, 100);
@@ -138,70 +90,69 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Teal;
             label1.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 176);
+            label1.Location = new Point(367, 44);
             label1.Name = "label1";
             label1.Size = new Size(82, 23);
             label1.TabIndex = 23;
             label1.Text = "NOMBRE";
             // 
-            // label3
+            // button1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(35, 323);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 23);
-            label3.TabIndex = 24;
-            label3.Text = "INSERTAR";
+            button1.BackColor = Color.Red;
+            button1.Location = new Point(83, 149);
+            button1.Name = "button1";
+            button1.Size = new Size(136, 67);
+            button1.TabIndex = 24;
+            button1.Text = "ACTUALIZAR";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
-            // label4
+            // button2
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(203, 323);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 23);
-            label4.TabIndex = 25;
-            label4.Text = "LIMPIAR";
+            button2.BackColor = Color.Red;
+            button2.Location = new Point(83, 251);
+            button2.Name = "button2";
+            button2.Size = new Size(136, 70);
+            button2.TabIndex = 25;
+            button2.Text = "LIMPIAR";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
-            // label5
+            // button3
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(32, 416);
-            label5.Name = "label5";
-            label5.Size = new Size(114, 23);
-            label5.TabIndex = 26;
-            label5.Text = "ACTUALIZAR";
+            button3.BackColor = Color.Red;
+            button3.Location = new Point(83, 350);
+            button3.Name = "button3";
+            button3.Size = new Size(136, 69);
+            button3.TabIndex = 26;
+            button3.Text = "INSERTAR";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
-            // label6
+            // button4
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(203, 416);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 23);
-            label6.TabIndex = 27;
-            label6.Text = "ELIMINAR";
+            button4.BackColor = Color.Red;
+            button4.Location = new Point(83, 451);
+            button4.Name = "button4";
+            button4.Size = new Size(136, 56);
+            button4.TabIndex = 27;
+            button4.Text = "ELIMINAR";
+            button4.UseVisualStyleBackColor = false;
             // 
             // TipoProdInterfaz
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(759, 519);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(panel1);
+            Controls.Add(button1);
+            Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(button4);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(panel1);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "TipoProdInterfaz";
@@ -211,23 +162,17 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Button button3;
-        private Button button4;
-        private Button button2;
-        private Button button1;
         private TextBox textBox1;
         private DataGridView dataGridView1;
         private Panel panel1;
         private Label label2;
         private Label label1;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }

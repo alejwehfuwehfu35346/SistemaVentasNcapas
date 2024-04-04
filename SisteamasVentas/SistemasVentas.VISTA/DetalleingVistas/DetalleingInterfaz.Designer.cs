@@ -39,16 +39,18 @@
             textBox2 = new TextBox();
             label8 = new Label();
             textBox1 = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             dataGridView1 = new DataGridView();
             label10 = new Label();
             textBox6 = new TextBox();
             label11 = new Label();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -144,50 +146,6 @@
             textBox1.Size = new Size(142, 23);
             textBox1.TabIndex = 226;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Red;
-            label6.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(843, 44);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 23);
-            label6.TabIndex = 225;
-            label6.Text = "ELIMINAR";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Red;
-            label5.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(682, 44);
-            label5.Name = "label5";
-            label5.Size = new Size(114, 23);
-            label5.TabIndex = 224;
-            label5.Text = "ACTUALIZAR";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Red;
-            label4.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(552, 44);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 23);
-            label4.TabIndex = 223;
-            label4.Text = "LIMPIAR";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Red;
-            label3.Font = new Font("Sitka Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(417, 44);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 23);
-            label3.TabIndex = 222;
-            label3.Text = "INSERTAR";
-            // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
@@ -242,15 +200,81 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label12);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label6);
             panel1.Location = new Point(0, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(1016, 100);
             panel1.TabIndex = 242;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Teal;
+            button6.Location = new Point(188, 172);
+            button6.Name = "button6";
+            button6.Size = new Size(86, 23);
+            button6.TabIndex = 6;
+            button6.Text = "SELEC";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click_1;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Teal;
+            button5.Location = new Point(199, 520);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 5;
+            button5.Text = "SELEC";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click_1;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Red;
+            button4.Location = new Point(847, 29);
+            button4.Name = "button4";
+            button4.Size = new Size(97, 47);
+            button4.TabIndex = 4;
+            button4.Text = "ELIMINAR";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Red;
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(705, 29);
+            button3.Name = "button3";
+            button3.Size = new Size(104, 47);
+            button3.TabIndex = 3;
+            button3.Text = "Insertar";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Red;
+            button2.Location = new Point(582, 29);
+            button2.Name = "button2";
+            button2.Size = new Size(99, 47);
+            button2.TabIndex = 2;
+            button2.Text = "LIMPIAR";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Red;
+            button1.Location = new Point(472, 29);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 47);
+            button1.TabIndex = 1;
+            button1.Text = "ACTUALIZAR";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // label12
             // 
@@ -270,7 +294,9 @@
             BackColor = Color.LightBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1014, 555);
+            Controls.Add(button6);
             Controls.Add(panel1);
+            Controls.Add(button5);
             Controls.Add(dateTimePicker1);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -309,10 +335,6 @@
         private TextBox textBox2;
         private Label label8;
         private TextBox textBox1;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
         private DataGridView dataGridView1;
         private Label label10;
         private TextBox textBox6;
@@ -320,5 +342,11 @@
         private DateTimePicker dateTimePicker1;
         private Panel panel1;
         private Label label12;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Button button6;
+        private Button button5;
     }
 }

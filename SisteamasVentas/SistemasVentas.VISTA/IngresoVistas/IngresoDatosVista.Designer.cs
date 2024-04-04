@@ -36,19 +36,20 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(28, 35);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(496, 442);
+            dataGridView1.Size = new Size(478, 390);
             dataGridView1.TabIndex = 0;
             // 
             // IngresoDatosVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(573, 521);
+            ClientSize = new Size(553, 453);
             Controls.Add(dataGridView1);
             Name = "IngresoDatosVista";
             Text = "IngresoDatosVista";
